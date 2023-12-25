@@ -1,0 +1,11 @@
+@import "../../../styles.scss";
+.submit-btn{
+    color: $white-color;
+    border: #f79333;
+    border-radius: 15px;
+    padding: 5px 15px;
+    font-size: 14px;
+    margin-left: 40%;
+    align-items: center;
+    background: linear-gradient(90deg,#f79333 0%,#f2b46c 85%);
+}

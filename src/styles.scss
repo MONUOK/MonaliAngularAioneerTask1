@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'ngx-toastr/toastr';
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.ngx-toastr {
+    margin-top: 20px !important;
+    border-radius: 10px !important;
+    /* background-color: #333333 !important; */
+    color: rgba(255, 255, 255, 0.87) !important;
+    padding-top: 15px !important;
+    padding-bottom: 10px !important;
+    width: 50px;
+  }
+  
+  .toast-success {
+      background-color: #ffffff !important;
+      color: rgba(7, 4, 4, 0.87) !important;
+      width: 180px !important;
+  }
+  //used scss
+  $white-color: #ffffff ;
+  $second-color: yellow;

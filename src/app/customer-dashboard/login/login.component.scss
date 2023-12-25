@@ -1,0 +1,36 @@
+@import "../../../styles.scss";
+.card-box{
+    background-color: #252525;
+    padding: 40px 40px;
+    margin: 40px 40px;
+    box-shadow: #4a5050;
+    border-radius: 25px;
+}
+.submit-btn{
+    color: $white-color;
+    border: #f79333;
+    border-radius: 15px;
+    padding: 5px 15px;
+    font-size: 14px;
+    margin-left: 40%;
+    align-items: center;
+    background: linear-gradient(90deg,#f79333 0%,#f2b46c 85%);
+}
+.text-white{
+    color: $white-color;
+}
+::ng-deep .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+    background-color: #323232 !important;
+    color:$white-color !important;
+  }
+  ::ng-deep .mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-text-field__input{
+    color:$white-color !important;
+  }
+  ::ng-deep  .mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-text-field__input::placeholder{
+    color:$white-color !important;
+    font-size: 12px !important;
+
+  }
+  ::ng-deep .form-field--read .mat-form-field-underline {
+    display: none;
+}

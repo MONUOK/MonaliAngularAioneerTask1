@@ -1,0 +1,240 @@
+@import "../../../styles.scss";
+.sidenav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 100;
+    width: 280px;
+    border-radius: 0;
+    transition: all 0.3s ease-in-out;
+    background-color: #1f1f1f;
+    padding-right: 25px;
+}
+ .sidenav-wrapper{
+    // background-color: #252525;
+    // -webkit-box-shadow: 2px 4px 14px 0px rgb(0 0 0 / 15%);
+    // box-shadow: 2px 4px 14px 0px rgba(1, 1, 1, 0.15);
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100%;
+}
+.show .sidenav{
+    width: 90px;
+    transition: all 0.3s ease-in-out;
+}
+.show .sidenav .sidenav- .sidenav-list li a .list-icon{
+    margin-right: 35px;
+    transition: all 0.3s ease-in-out;
+} 
+ .sidenav .sidenav-header {
+    padding-bottom: 10px;
+    min-height: 80px;
+    padding: 30px;
+}
+ .sidenav .sidenav-header .close-toggler{
+    position: absolute;
+    top: 10px;
+    right: 35px;
+    background-color: #000000;
+    color: $white-color;
+    border-radius: 50%;
+    padding: 4px 0px;
+    display: none;
+}
+.sidenav-header .close-toggler .navbar-toggler-icon{
+    font-size: 20px;
+}
+ .sidenav .sidenav-header .close-toggler i{
+    position: relative;
+    top: 2px;
+}
+ .sidenav .sidenav-header .navbar-brand.small-logo img {
+    height: 50px;
+    transition: all 0.2s ease-in-out;
+}
+ .sidenav .sidenav-header .navbar-brand.full-logo img {
+    height: 50px;
+    display: none;
+    transition: all 0.2s ease-in-out;
+}
+ .sidenav .sidenav-header .header-info .info-box{
+    padding: 10px 16px;
+    background-color: #323232;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+ .sidenav .sidenav-header .header-info span{
+    font-size: 12px;
+    color: #9f9f9f;
+    margin-bottom: 0;
+}
+ .sidenav .sidenav-header .header-info h5{
+    font-size: 20px;
+    color: #9f9f9f;
+    margin-bottom: 0;
+}
+
+ .sidenav .sidenav-header .sidenav-list{
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 20px;
+    min-width: 240px;
+}
+ .sidenav .sidenav-header .sidenav-list li a{
+    font-size: 14px;
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+    padding: 5px 20px;
+    border-radius: 0;
+    cursor: pointer;
+    position: relative;
+}
+ .sidenav .sidenav-header .sidenav-list li a .list-icon{
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    margin-right: 6px;
+    color:white;
+    font-size: 17px;
+    transition: all 0.3s ease-in-out;
+    background-color: #252525;
+}
+ .sidenav .sidenav-header .sidenav-list li a:hover{
+    color: #f1b356;
+    background-color: #252525;
+    transition: all 0.3s ease-in-out;
+}
+ .sidenav .ssidenav-header .sidenav-list li a:hover .list-icon{
+    color: $white-color;
+    background: rgb(243,115,53);
+    background: -moz-linear-gradient(90deg, rgba(243,115,53,1) 0%, rgba(253,200,48,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(243,115,53,1) 0%, rgba(253,200,48,1) 100%);
+    background: linear-gradient(90deg, rgba(243,115,53,1) 0%, rgba(253,200,48,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f37335",endColorstr="#fdc830",GradientType=1);
+    border-color: #000000;
+    transition: all 0.3s ease-in-out;
+}
+ .sidenav .sidenav-header .sidenav-list li a.active{
+    color: #f1b356;
+    background-color: #252525;
+    transition: all 0.3s ease-in-out;
+}
+ .sidenav .sidenav-header .sidenav-list li a.active .list-icon{
+    color: $white-color;
+    background: rgb(243,115,53);
+    background: -moz-linear-gradient(90deg, rgba(243,115,53,1) 0%, rgba(253,200,48,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(243,115,53,1) 0%, rgba(253,200,48,1) 100%);
+    background: linear-gradient(90deg, rgba(243,115,53,1) 0%, rgba(253,200,48,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f37335",endColorstr="#fdc830",GradientType=1);
+    border-color: #000000;
+    transition: all 0.3s ease-in-out;
+}
+
+
+ .sidenav sidenav-header .sidenav-list li.sidenav-dropdown {
+    background-color: $white-color;
+    transition: all 0.3s ease-in-out;
+}
+ .sidenav .sidenav-header .sidenav-list li a.dropdown-toggle::after{
+    position: absolute;
+    top: 24px;
+    right: 20px;
+}
+ .sidenav .sidenav- .sidenav-list li.sidenav-dropdown .dropdown-nav-link.show {
+    color: $white-color;
+    background-color: #78cef3;
+    -webkit-box-shadow: 2px 4px 14px 0px #00000026;
+    box-shadow: 2px 4px 14px 0px #00000026;
+    transition: all 0.3s ease-in-out;
+}
+ .sidenav .sidenav-header .sidenav-list li.sidenav-dropdown .dropdown-menu {
+    position: inherit !important;
+    transform: inherit !important;
+    border: 0;
+    background-color: #f7f8ff;
+    padding: 12px 10px;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+    list-style-type: square;
+    padding-left: 53px;
+}
+ .sidenav .sidenav-header .sidenav-list li.sidenav-dropdown .dropdown-menu.show {
+    transition: all 0.3s ease-in-out;
+}
+ .sidenav .sidenav-header .sidenav-list li.sidenav-dropdown .dropdown-menu .dropdown-item {
+    font-size: 14px;
+    color: #565656;
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 0;
+    transition: all 0.3s ease-in-out;
+}
+ .sidenav .sidenav-header .sidenav-list li.sidenav-dropdown .dropdown-menu .dropdown-item span {
+    display: inline-block;
+    min-width: 18px;
+    text-align: center;
+}
+ .sidenav .sidenav-header .sidenav-list li.sidenav-dropdown .dropdown-menu .dropdown-item:hover {
+    color: #78cef3;
+    background-color: #f7f8ff;
+    box-shadow: none;
+}
+ .sidenav .sidenav-header.sidenav-btn{
+    font-size: 16px;
+    background-color: #252525;
+    color: $white-color;
+    border: 0;
+    padding: 10px 7px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    border-radius: 0 12px 12px 0;
+}
+.pl-3 {
+	padding-left: 16px !important;
+}
+@media (min-width: 320px) and (max-width: 578px){
+     .sidenav .sidenav-header .close-toggler {
+        display: block;
+    }
+   
+    .show .sidenav .sidenav-header .header-info{
+        display: block;
+        transition: all 0.3s ease-in-out;
+    } 
+    header .navbar-custom .navbar-nav .nav-item .nav-link{
+        font-size: 12px;
+    }
+     .sidenav {
+        transform: translateX(-100%);
+        height: 100%;
+        box-shadow: none;
+        display: none;
+    }
+
+     .sidenav.collapse {
+        transform: translateX(0);
+        width: 80%;
+        height: 100%;
+    }
+    .show .sidenav {
+        transform: translateX(0);
+        width: 350px;
+        height: 100%;
+    }
+     .sidenav .sidenav-header .logo-title {
+        font-size: 24px;
+    }
+    .show .sidenav{
+        width: 80%;
+    } 
+}

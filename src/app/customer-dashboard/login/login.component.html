@@ -1,0 +1,44 @@
+<div class="container-fuild">
+    <div class="row justify-content-center">
+        <div class="col-sm-12 col-md-6 col-6">
+            <div class="card-box">
+                <form [formGroup]="customerLoginForm" >
+                    <label class="text-white">  Email</label><br>
+                      <mat-form-field style="width: 100%;">
+                        <input matInput type="email"  formControlName="email" required>
+                        @if(customerLoginForm.get('email')!.hasError('required')){
+                        <mat-error>
+                            Email is required
+                        </mat-error> 
+                        }
+                        @if(customerLoginForm.get('email')?.hasError('email')){
+                        <mat-error >
+                          Please enter a valid email address
+                         </mat-error> 
+                        }
+                    </mat-form-field><br><br>
+                    <label class="text-white">  Password</label><br>
+                      <mat-form-field style="width: 100%;"> 
+                        <input matInput [type]="hide ? 'password' : 'text'"  formControlName="password" required>
+                        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </button>
+                        @if(customerLoginForm.get('password')?.hasError('required')){
+                         <mat-error>
+                                Password is required
+                         </mat-error>
+                        }
+                        @if(customerLoginForm.get('password')?.hasError('pattern')){
+                            <mat-error>
+                                Password must has at least 6 characters that include at least 1 lowercase character, 1 uppercase characters, 1 number, and 1 special character in (!#$%^&*) .                          
+                             </mat-error>
+                        }
+                    </mat-form-field>
+                      <br><br><br>
+                      <button type="submit" class="submit-btn" [disabled]="customerLoginForm.invalid" (click)="onSubmit()">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

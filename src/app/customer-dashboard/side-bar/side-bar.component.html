@@ -1,0 +1,39 @@
+<div class="sidenav" id="sidenav">
+    <div class="sidenav-wrapper">
+      <div class="sidenav-header">
+        <div class="d-flex align-items-center pb-2">
+          <a class="navbar-brand mr-0 small-logo" href="#">
+            <img src="../../../assets/logo.png" title="logo" alt="logo">
+          </a>
+        </div>
+        <button class="navbar-toggler close-toggler ml-3 close-sidenav-icon" type="button" data-bs-toggle="collapse"
+          data-bs-target="#sidenav" aria-controls="sidenav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"><i class="fi fi-rr-cross-small"></i></span>
+        </button>
+      
+      <div class="sidenav-body">
+        <ul class="sidenav-list">
+          <li  (click)="navigateDashboards()">
+            <a class="">
+              <span class="list-icon"><i class="fi fi-rr-home"></i></span>
+              <span class="list-title">Dashboards</span>
+            </a>
+          </li>
+          <li >
+            <a class="" (click)="navigateCustomer()">
+              <span class="list-icon"><i class="fi fi-rr-usd-circle"></i></span>
+              <span class="list-title">Customers</span>
+            </a>
+          </li>
+          <li>
+            <a class="">
+              <span class="list-icon"><i class="fi fi-rr-bell"></i></span>
+              <span class="list-title">Notifications</span>
+            </a>
+          </li>
+         
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

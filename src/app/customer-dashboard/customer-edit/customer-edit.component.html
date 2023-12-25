@@ -1,0 +1,53 @@
+
+    <h1 class="title">Edit Customer</h1>
+    <div class="form-box">
+        <form [formGroup]="editCustomerForm" >
+            <label class="text-white">First Name</label><br>
+              <mat-form-field style="width: 100%;">
+                <input matInput type="firstName"  formControlName="firstName" required>
+                @if(editCustomerForm.get('firstName')!.hasError('required')){
+                <mat-error>
+                    First Name is required
+                </mat-error> 
+                }
+            </mat-form-field><br><br>
+            <label class="text-white">Last Name</label><br>
+            <mat-form-field style="width: 100%;">
+                <input matInput type="lastName"  formControlName="lastName" required>
+                @if(editCustomerForm.get('lastName')!.hasError('required')){
+                <mat-error>
+                    Last Name is required
+                </mat-error> 
+                }
+            </mat-form-field><br><br>
+            <label class="text-white">Emails</label><br>
+            <mat-form-field style="width: 100%;">
+                <input matInput type="email"  formControlName="email" required>
+                @if(editCustomerForm.get('email')!.hasError('required')){
+                <mat-error>
+                    Email is required
+                </mat-error> 
+                }
+                @if(editCustomerForm.get('email')?.hasError('email')){
+                <mat-error >
+                  Please enter a valid email address
+                 </mat-error> 
+                }
+            </mat-form-field><br><br>
+            <label class="text-white">Phone Number</label><br>
+            <mat-form-field style="width: 100%;">
+                <input matInput type="phoneNumber"  formControlName="phoneNumber" required>
+                @if(editCustomerForm.get('phoneNumber')!.hasError('required')){
+                <mat-error>
+                    Phone Number is required
+                </mat-error> 
+                }
+                @if(editCustomerForm.get('phoneNumber')?.hasError('pattern')){
+                <mat-error >
+                  Please enter a valid valid phone number
+                 </mat-error> 
+                }
+            </mat-form-field><br><br>
+            <button type="submit" class="submit-btn" [disabled]="editCustomerForm.invalid" (click)="onSubmit()">Edit</button>
+        </form>
+    </div>
